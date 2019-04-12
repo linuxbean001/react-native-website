@@ -57,7 +57,12 @@ Edit the file `android/app/build.gradle` in your project folder, and add the sig
 ...
 android {
     ...
-    defaultConfig { ... }
+    defaultConfig { ...
+    
+     ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+    }
     signingConfigs {
         release {
             if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
